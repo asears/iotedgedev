@@ -37,8 +37,12 @@ The only thing you need to install is Docker. All of the other dev dependencies 
     Before you run the container, you will need to create a local folder to store your IoT Edge solution files.
     
     **Windows**
+    
+    To run on Windows, switch to Linux Containers in Docker or use [Experimental Features](https://blogs.msdn.microsoft.com/premier_developer/2018/04/20/running-docker-windows-and-linux-containers-simultaneously/).
+    
     ```
     mkdir c:\temp\iotedge
+    docker pull --platform=linux microsoft/iotedgedev
     docker run -ti -v /var/run/docker.sock:/var/run/docker.sock -v c:/temp/iotedge:/home/iotedge microsoft/iotedgedev
     ```
 
